@@ -4,7 +4,7 @@ app = Flask(__name__)
 redis = redis.Redis(host='redis', port=6379, db=0)
 @app.route('/')
 def hello_world():
-    return 'Hello, World! (On GitHub ver2)'
+    return 'Hello, World!'
 @app.route('/visitor')
 def visitor():
     redis.incr('visitor')
